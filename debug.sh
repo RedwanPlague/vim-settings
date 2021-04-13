@@ -1,20 +1,25 @@
 fullfile=$1
-extention=${fullfile##*.}
-filename=${fullfile%.*}
+extension="${fullfile##*.}"
+filename="${fullfile%.*}"
 
-# echo "$fullfile"
-# echo "$filename" "$extention"
-
-# handling extentionless file names like 'main'
-if [ "$extention" = "$fullfile" ]; then
-    echo "***** Sorry, cannot debug file with no extention *****"
-    exit
-fi
-
-if [ "$extention" = 'cpp' ]; then
-    g++-10 -std=c++17 -g -D REDWAN "$fullfile"; gdb ./a.out
-elif [ "$extention" = 'c' ]; then
-    gcc-10 -g -D REDWAN "$fullfile"; gdb ./a.out
-else
-    echo "***** Sorry, cannot debug file with extention '${extention}' *****"
-fi
+case "$extension" in
+    "$fullfile")
+        echo "***** ERROR: no extension *****"
+        exit 1
+        ;;
+    "c")
+        gcc -D REDWAN -g "$fullfile"
+        gdb ./a.out
+        ;;
+    "cpp")
+        g++ -std=c++17 -D REDWAN -g "$fullfile"
+        gdb ./a.out
+        ;;
+    "js")
+        node inspect "$fullfile"
+        ;;
+    *)
+        echo "***** ERROR: unknown extension *****"
+        exit 1
+        ;;
+esac
