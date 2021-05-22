@@ -11,7 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'yggdroot/indentline'
 Plug 'vim-scripts/matchit.zip'
@@ -20,7 +20,7 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'luochen1990/rainbow', { 'on': 'RainbowToggle' }
 " Plug 'mattn/emmet-vim'
 " Plug 'othree/html5.vim'
-Plug 'vim-scripts/bash-support.vim'
+" Plug 'vim-scripts/bash-support.vim'
 " Plug 'storyn26383/vim-vue'
 " Plug 'xolox/vim-misc'
 " Plug 'xolox/vim-easytags'
