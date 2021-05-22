@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/redwan/Documents/Programming/cses_problems/Tree-Algorithms'
+let g:netrw_dirhist_0='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-2/bmp_image_codes'
+let g:netrw_dirhist_9='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-2/pipeline'
+let g:netrw_dirhist_8='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-1'
+let g:netrw_dirhist_7='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-2'
+let g:netrw_dirhist_6='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-2/bmp_image_codes'
+let g:netrw_dirhist_5='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-2'
+let g:netrw_dirhist_4='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-1'
+let g:netrw_dirhist_3='/home/redwan/Documents/L4-T1/all-codes/graphics-lab'
+let g:netrw_dirhist_2='/home/redwan/Documents/L4-T1/all-codes/graphics-lab/offline-2/pipeline'

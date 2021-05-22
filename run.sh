@@ -19,7 +19,7 @@ case "$extension" in
         javac "$fullfile"
         java "$filename"
         ;;
-    "python")
+    "py")
         python3 "$fullfile"
         ;;
     "js")
