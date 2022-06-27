@@ -1,9 +1,11 @@
 call plug#begin('~/.local/share/nvim/site/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
+
 " Plug 'crusoexia/vim-monokai'
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'tpope/vim-fugitive'
+
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
@@ -12,16 +14,20 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
-Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'yggdroot/indentline'
 Plug 'vim-scripts/matchit.zip'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'chrisbra/csv.vim'
+
 " Plug 'vim-python/python-syntax'
 " Plug 'sheerun/vim-polyglot'
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
 Plug 'luochen1990/rainbow', { 'on': 'RainbowToggle' }
+
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 " Plug 'mattn/emmet-vim'
 " Plug 'othree/html5.vim'
@@ -29,6 +35,7 @@ Plug 'luochen1990/rainbow', { 'on': 'RainbowToggle' }
 " Plug 'storyn26383/vim-vue'
 " Plug 'xolox/vim-misc'
 " Plug 'xolox/vim-easytags'
+
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
 Plug 'ryanoasis/vim-devicons' " this must be last plugin in the list
 call plug#end()
@@ -214,8 +221,13 @@ noremap <silent> <C-Down> :resize +1<CR>
 nnoremap <silent> <C-N> :call gruvbox#hls_toggle()<CR>
 tmap <ESC> <C-\><C-N>
 
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
 " command Vt vs term:///bin/bash
 " command St sp term:///bin/bash
+
+nnoremap <F3> :CSVTabularize<CR> <C-W>o
+nnoremap Z :bd!<CR>
 
 set exrc
 set secure
@@ -237,7 +249,7 @@ set smarttab
 set autoindent
 set smartindent
 set cindent
-autocmd BufRead,BufNewFile *.htm,*.html,*.css,*.js,*.json setlocal tabstop=2 shiftwidth=2
+" autocmd BufRead,BufNewFile *.htm,*.html,*.css,*.js,*.json setlocal tabstop=2 shiftwidth=2
 " autocmd Filetype htm,html let g:AutoPairs['<']='>'
 " autocmd Filetype htm,html,vue let g:AutoPairs['{{']='}}'
 " autocmd Filetype htm,html let g:AutoPairs['{%']='%}'
